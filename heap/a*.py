@@ -59,7 +59,7 @@ def checkValidCell(maze, neighbor):
     mazeCol = len(maze[0])-1
     neighborRow, neighborCol = neighbor
 
-    return (neighborRow != -1 and neighborCol != -1 and neighborRow <= mazeRow and neighborCol <= mazeCol)
+    return (neighborRow != -1 and neighborCol != -1 and neighborRow <= mazeRow and neighborCol <= mazeCol and maze[neighborRow][neighborCol] != "*")
 
 def computeHeuristicValue(a, b):
     r1, c1 = a
