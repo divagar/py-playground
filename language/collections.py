@@ -1,4 +1,5 @@
 import collections
+import string
 
 def main():
     try:
@@ -38,6 +39,25 @@ def main():
         user['lastName'] = "Mohandass"
         user['age'] = 37
         print(user['hello']) # this access can produce exception using normal dict, but here it is init to empty str
+
+        #counter collection
+        print("Counter collection")
+        fruits1 = ["apple", "banana", "pineapple", "orange", "apple", "pineapple"]
+        fruits2 = ["berries", "grapes", "apple", "orange", "apple"]
+        fruitsCounter1 = collections.Counter(fruits1)
+        fruitsCounter2 = collections.Counter(fruits2)
+        print(fruitsCounter1)
+        print(fruitsCounter2)
+        print(fruitsCounter1 & fruitsCounter2)
+
+        #deque - double ended queue
+        print("Double ended queue collection")
+        q = collections.deque(string.ascii_lowercase)
+        print(q)
+ 
+        q.popleft()
+        q.appendleft("A")
+        print(q)
         
     except Exception as e:
         print("Unknown error occurred ", e)
