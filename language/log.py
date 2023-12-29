@@ -1,7 +1,14 @@
 import logging
 
+logLevel = logging.DEBUG
+logFilename = "language/log.log"
+logFileMode = "w"
+logFormat = "%(asctime)s | %(levelname)s | %(funcName)s: Line#%(lineno)d | %(message)s"
+logDateFormat = "%Y-%m-%d %I:%M:%S %p"
+
+logging.basicConfig(level=logLevel, filename=logFilename, filemode=logFileMode, format=logFormat, datefmt=logDateFormat)
+
 def helloWorld(name):
-    logging.basicConfig(level=logging.DEBUG, filename="language/log.log", filemode="w")
 
     logging.debug("I am in hello world function.")
     logging.info("Hello world greeting for user " + name)
