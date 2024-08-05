@@ -21,8 +21,8 @@ def main():
                 evenOdd["odd"] += 1
         print(evenOdd)
         print("w/ Dict comprehension")
-        #evenOdd = {"even": evenOdd["even"] +1 for num in nums if num%2 == 0}
-        evenOdd = {"odd": evenOdd["odd"] +1 for num in nums if num%2 != 0}
+        evenOdd = {"even": evenOdd["even"] +1 for num in nums if num%2 == 0}
+        #evenOdd = {"odd": evenOdd["odd"] +1 for num in nums if num%2 != 0}
         print(evenOdd)
 
 

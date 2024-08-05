@@ -33,7 +33,7 @@ def main():
         print(myUser.firstname, myUser.lastname, myUser.age)
 
         #default dict
-        print("Defact dict collection")
+        print("Default dict collection")
         user = collections.defaultdict(str)
         user['firstName'] = "Divagar"
         user['lastName'] = "Mohandass"
